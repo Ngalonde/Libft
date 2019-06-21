@@ -6,7 +6,7 @@
 /*   By: zmadi <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:19:28 by zmadi             #+#    #+#             */
-/*   Updated: 2019/06/15 08:15:10 by zmadi            ###   ########.fr       */
+/*   Updated: 2019/06/21 14:40:07 by zmadi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	ft_putstr(const char *str)
 {
-	size_t i;
-
+	size_t	i;
+	
 	i = 0;
-	if (str == NULL)
-		return ;
-	while (str[i] != '\0')
+	if (str)
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (str[i])
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
 	}
 }
